@@ -55,7 +55,7 @@ th{color:var(--mute);font-weight:500;font-size:12px;text-transform:uppercase;let
 </section>
 </div><div id="toast"></div>
 <script type="module">
-const $=s=>document.querySelector(s),BASE='https://hainamngocdiepwedding.pages.dev/';
+const $=s=>document.querySelector(s),BASE='https://hainamngocdiepwedding.khunglongcon.com/';
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const toast=t=>{const e=$('#toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),1600)};
 const copy=t=>navigator.clipboard.writeText(t).then(()=>toast('Đã copy')).catch(()=>prompt('Copy:',t));
