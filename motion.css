@@ -6,7 +6,7 @@ body{background:#e9e8e5}main{box-shadow:0 0 90px #0002;position:relative}
 .cover:before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 38%,#ffffff0c,transparent 70%);pointer-events:none}
 .cover-card{overflow:visible;border-radius:12px;background:#fff url('/assets/guestbook-paper.webp') center/cover;transform-style:preserve-3d;animation:card-arrive 1.6s var(--ease-soft) both;box-shadow:0 35px 90px #0007,0 1px 0 #fff9 inset;isolation:isolate}
 .cover-card:before{content:'';position:absolute;inset:9px;border:1px solid #aaa5;border-radius:8px;pointer-events:none;z-index:-1}
-.cover-card:after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 28%,#ffffff8c 45%,transparent 62%);border-radius:inherit;pointer-events:none;animation:paper-light 7s ease-in-out infinite;mix-blend-mode:soft-light}
+.cover-card:after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 28%,#ffffff8c 45%,transparent 62%);background-size:240% 100%;border-radius:inherit;pointer-events:none;animation:paper-light 7s ease-in-out infinite;mix-blend-mode:soft-light}
 .cover .seal{animation:seal-breathe 4s ease-in-out infinite;transition:transform .5s var(--ease-soft);font-size:25px;background:#383838;position:relative}
 .cover .seal:after{content:'';position:absolute;inset:5px;border:1px solid #ffffff45;border-radius:50%}
 .cover h1{font-size:34px;line-height:1.25}.cover h1 span{font-family:Nautigal;font-size:36px;margin:2px 0}
@@ -26,7 +26,7 @@ body.opened .envelope .bouquet{animation:bouquet-unveil 2.6s .6s var(--ease-soft
 body.opened .hero-name{animation:fade-rise 2s .9s var(--ease-soft) both}
 body.opened .hero-date{animation:fade-rise 2s 1.15s var(--ease-soft) both}
 body.opened .scroll{animation:fade-rise 2s 1.35s var(--ease-soft) both}
-header{padding-bottom:58px}.envelope{perspective:1000px}.hero-name{font-size:47px;line-height:1.22;letter-spacing:-.015em}.hero-name span{font:39px/1 Nautigal,cursive;margin:6px 0}.hero-date{font-size:17px;letter-spacing:.18em;opacity:.9}
+header{padding-bottom:58px}.envelope{perspective:1000px;height:auto;aspect-ratio:.96}.hero-name{font-size:47px;line-height:1.22;letter-spacing:-.015em}.hero-name span{font:39px/1 Nautigal,cursive;margin:6px 0}.hero-date{font-size:17px;letter-spacing:.18em;opacity:.9}
 .scroll{display:inline-block;letter-spacing:.05em}.scroll:after{content:'';display:block;width:1px;height:30px;background:linear-gradient(#fff8,transparent);margin:15px auto 0;animation:scroll-hint 2.8s ease-in-out infinite}
 nav{position:relative;z-index:3;padding-top:24px}nav a{transition:opacity .4s,border-color .4s}
 .lace{margin-bottom:72px}.paper{box-shadow:0 8px 22px #0001;border-radius:2px;padding-top:32px;padding-bottom:32px}.lace:before,.lace:after{z-index:1;filter:drop-shadow(0 2px 2px #0001)}
@@ -50,7 +50,7 @@ nav{position:relative;z-index:3;padding-top:24px}nav a{transition:opacity .4s,bo
 dialog{opacity:0;transform:translateY(18px) scale(.96);transition:opacity .4s,transform .5s var(--ease-soft),overlay .5s allow-discrete,display .5s allow-discrete;border-radius:10px}dialog[open]{opacity:1;transform:translateY(0) scale(1)}@starting-style{dialog[open]{opacity:0;transform:translateY(18px) scale(.96)}}dialog::backdrop{backdrop-filter:blur(7px)}
 @keyframes card-arrive{from{opacity:0;transform:translateY(32px) rotateX(9deg) scale(.96)}to{opacity:1;transform:translateY(0) rotateX(0) scale(1)}}
 @keyframes seal-breathe{0%,100%{box-shadow:0 5px 20px #0004;transform:scale(1)}50%{box-shadow:0 7px 27px #0003;transform:scale(1.045)}}
-@keyframes paper-light{0%,65%,100%{opacity:0;transform:translateX(-35%)}25%,40%{opacity:.5}60%{transform:translateX(35%)}}
+@keyframes paper-light{0%,65%,100%{opacity:0;background-position:200% 0}25%,40%{opacity:.5}60%{opacity:0;background-position:-100% 0}}
 @keyframes flower-left{0%,100%{transform:rotate(-2deg)}50%{transform:translateY(-4px) rotate(3deg)}}
 @keyframes flower-right{0%,100%{transform:rotate(178deg)}50%{transform:translateY(4px) rotate(183deg)}}
 @keyframes unfold-card{0%{transform:translateY(0) rotateX(0);opacity:1}35%{transform:translateY(-12px) rotateX(8deg) scale(1.025);opacity:1}100%{transform:translateY(-100px) rotateX(24deg) scale(1.12);opacity:0}}
