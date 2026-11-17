@@ -19,3 +19,5 @@
 .gallery-detail>img{height:auto}.wax-seal{padding:0}.wax-seal>span:first-child{white-space:nowrap;font-size:16px;letter-spacing:-.5px}.wax-seal i{font-size:20px}.is-covered .reading-progress{opacity:0}
 @media(max-width:360px){.hero-copy h1{font-size:26px;gap:8px}.hero-copy h1 i{font-size:34px}.gallery-detail figcaption{font-size:21px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.js-motion .reveal{opacity:1;transform:none}.photo-frame img.drifting{transform:none}}
+
+#hero-title:focus{outline:none}
